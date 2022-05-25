@@ -203,10 +203,10 @@ TextureImporter:
       name: textur01_4
       rect:
         serializedVersion: 2
-        x: 207
-        y: 1682
-        width: 259
-        height: 240
+        x: 180
+        y: 1791
+        width: 227
+        height: 127
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,6 +216,48 @@ TextureImporter:
       bones: []
       spriteID: 42587d833c9012c47b9d2f4729bceeb9
       internalID: 1667161086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textur01_5
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 1819
+        width: 190
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c67220069b8d8144920d7cd27e6d5ac
+      internalID: 189615664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textur01_6
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 1933
+        width: 191
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60cd64d4765ba2a4ab8ac6c4c444f042
+      internalID: 1338095535
       vertices: []
       indices: 
       edges: []
@@ -232,6 +274,8 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       textur01_4: 1667161086
+      textur01_5: 189615664
+      textur01_6: 1338095535
       textur01_2: 1717210264
       textur01_1: -939923514
       textur01_3: -438745898
