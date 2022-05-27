@@ -6,19 +6,26 @@ public class PlayerController : MonoBehaviour
 {
     private Vector3 input;
     public Grid grid;
-    const float MOVE_DIAG = 0.5f;
-    const float MOVE_LINE = 0.8f;
-
-    private Vector3Int targetCell;
+    public GridLayout gridLayout;
+    private Vector3Int gridMovement;
+    private Vector3Int cellPosition;
     private Vector2 targetPosition;
+    public float moveSpeed = 5f;
+
     // Start is called before the first frame update
     void Start()
     {
-        targetCell = grid.WorldToCell(transform.position);
-        transform.position = grid.CellToWorld(targetCell);
+        SnapToCell();
+        gridMovement = new Vector3Int();
     }
 
     // Update is called once per frame
+    void SnapToCell()
+    {
+        cellPosition = gridLayout.WorldToCell(transform.position);
+        transform.position = gridLayout.CellToWorld(cellPosition);
+    }
+
     void Update()
     {
         Moving();
@@ -29,17 +36,34 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            var dist = new Vector2(transform.position.x + MOVE_LINE, transform.position.y + MOVE_DIAG);
-
-            Debug.Log(transform.position);
-            transform.position = Vector2.MoveTowards(transform.position, dist, 10f);
+            gridMovement.x += 1;
         }
         
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            var dist = new Vector2(transform.position.x - MOVE_LINE, transform.position.y - MOVE_DIAG);
-            transform.position = Vector2.MoveTowards(transform.position, dist, 10f);
+            gridMovement.x -= 1;
         }
+        
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            gridMovement.y += 1;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            gridMovement.y -= 1;
+        }
+        
+        if(gridMovement != Vector3Int.zero) {
+            targetPosition = grid.CellToWorld(gridMovement);
+            MoveToward(targetPosition);
+        }
+
+    }
+
+    void MoveToward(Vector2 target)
+    {
+        transform.position = Vector2.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);
     }
 
 }

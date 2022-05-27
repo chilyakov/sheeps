@@ -269,6 +269,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6786bc64da613d42bd02e6d6a058e37, type: 3}
+--- !u!1839735485 &1991607115 stripped
+Tilemap:
+  m_CorrespondingSourceObject: {fileID: 2836054285027803247, guid: d6786bc64da613d42bd02e6d6a058e37, type: 3}
+  m_PrefabInstance: {fileID: 1382342197}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2731218014491815746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -282,11 +287,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2618005187027704461, guid: 0328ab69a807623418914ef5a20995eb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.59
+      value: -4.648
       objectReference: {fileID: 0}
     - target: {fileID: 2618005187027704461, guid: 0328ab69a807623418914ef5a20995eb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.289
+      value: -2.722
       objectReference: {fileID: 0}
     - target: {fileID: 2618005187027704461, guid: 0328ab69a807623418914ef5a20995eb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -324,6 +329,10 @@ PrefabInstance:
       propertyPath: grid
       value: 
       objectReference: {fileID: 659522642}
+    - target: {fileID: 2618005187027704466, guid: 0328ab69a807623418914ef5a20995eb, type: 3}
+      propertyPath: gridLayout
+      value: 
+      objectReference: {fileID: 1991607115}
     - target: {fileID: 2618005187027704467, guid: 0328ab69a807623418914ef5a20995eb, type: 3}
       propertyPath: m_Name
       value: Player
