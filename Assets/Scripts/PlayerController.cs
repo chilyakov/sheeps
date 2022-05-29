@@ -4,19 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Vector3 input;
-    public Grid grid;
     public GridLayout gridLayout;
-    private Vector3Int gridMovement;
     private Vector3Int cellPosition;
-    private Vector2 targetPosition;
-    public float moveSpeed = 5f;
 
     // Start is called before the first frame update
     void Start()
     {
         SnapToCell();
-        gridMovement = new Vector3Int();
     }
 
     // Update is called once per frame
@@ -24,6 +18,7 @@ public class PlayerController : MonoBehaviour
     {
         cellPosition = gridLayout.WorldToCell(transform.position);
         transform.position = gridLayout.CellToWorld(cellPosition);
+        //Debug.Log(cellPosition);
     }
 
     void Update()
@@ -34,36 +29,37 @@ public class PlayerController : MonoBehaviour
 
     void Moving()
     {
+
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            gridMovement.x += 1;
+            cellPosition.x += 2;
+            MoveToward();
         }
         
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            gridMovement.x -= 1;
+            cellPosition.x -= 2;
+            MoveToward();
         }
         
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            gridMovement.y += 1;
+            cellPosition.y += 2;
+            MoveToward();
         }
         
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            gridMovement.y -= 1;
+            cellPosition.y -= 2;
+            MoveToward();
         }
-        
-        if(gridMovement != Vector3Int.zero) {
-            targetPosition = grid.CellToWorld(gridMovement);
-            MoveToward(targetPosition);
-        }
-
+  
     }
 
-    void MoveToward(Vector2 target)
+    void MoveToward()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);
+        //Debug.Log(cellPosition);
+        transform.position = gridLayout.CellToWorld(cellPosition);
     }
 
 }
