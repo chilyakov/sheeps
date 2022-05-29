@@ -94,8 +94,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1513640338253079538}
   - component: {fileID: 1513640338253079539}
-  - component: {fileID: 7509473444730333360}
   - component: {fileID: 4470122671292430341}
+  - component: {fileID: 1515967306}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -132,7 +132,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridLayout: {fileID: 0}
---- !u!60 &7509473444730333360
+  speed: 2
+--- !u!50 &4470122671292430341
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513640338253079540}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &1515967306
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,29 +179,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.0001282692, y: -0.22427142}
-      - {x: -0.886077, y: -0.6767819}
-      - {x: -0.0046967864, y: -1.1271564}
-      - {x: 0.8863336, y: -0.6786716}
-      - {x: 0.39490366, y: -0.4236396}
---- !u!50 &4470122671292430341
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1513640338253079540}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+    - - {x: 0.016436577, y: -0.24916553}
+      - {x: -0.8278428, y: -0.67361426}
+      - {x: 0.017183363, y: -1.0789589}
+      - {x: 0.85577595, y: -0.6734817}
+      - {x: 0.43663836, y: -0.46106988}

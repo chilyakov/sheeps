@@ -7,14 +7,13 @@ public class PlayerController : MonoBehaviour
     public GridLayout gridLayout;
     private Vector3Int cellPosition;
     private Vector3 startPosition;
+    public float speed = 30f;
 
-    // Start is called before the first frame update
     void Start()
     {
         SnapToCell();
     }
 
-    // Update is called once per frame
     void SnapToCell()
     {
         cellPosition = gridLayout.WorldToCell(transform.position);
@@ -62,9 +61,10 @@ public class PlayerController : MonoBehaviour
     {
         //Debug.Log(cellPosition);
         startPosition = transform.position;
-        //transform.position = gridLayout.CellToWorld(cellPosition);
+        transform.position = gridLayout.CellToWorld(cellPosition);
         var target = gridLayout.CellToWorld(cellPosition);
-        transform.position = Vector2.MoveTowards(transform.position, target, 100f * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+
     }
     void OnTriggerEnter2D(Collider2D col)
     {
