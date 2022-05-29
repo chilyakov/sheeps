@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public GridLayout gridLayout;
     private Vector3Int cellPosition;
+    private Vector3 startPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
     {
         cellPosition = gridLayout.WorldToCell(transform.position);
         transform.position = gridLayout.CellToWorld(cellPosition);
+        startPosition = transform.position;
         //Debug.Log(cellPosition);
     }
 
@@ -59,8 +61,17 @@ public class PlayerController : MonoBehaviour
     void MoveToward()
     {
         //Debug.Log(cellPosition);
-        transform.position = gridLayout.CellToWorld(cellPosition);
+        startPosition = transform.position;
+        //transform.position = gridLayout.CellToWorld(cellPosition);
+        var target = gridLayout.CellToWorld(cellPosition);
+        transform.position = Vector2.MoveTowards(transform.position, target, 100f * Time.deltaTime);
+    }
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        Debug.Log("GameObject1 collided with " + col.name);
+        transform.position = startPosition;
     }
 
-}
+
+  }
 
