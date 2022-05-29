@@ -33,25 +33,25 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            cellPosition.x += 2;
+            cellPosition.x += 1;
             MoveToward();
         }
         
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            cellPosition.x -= 2;
+            cellPosition.x -= 1;
             MoveToward();
         }
         
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            cellPosition.y += 2;
+            cellPosition.y += 1;
             MoveToward();
         }
         
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            cellPosition.y -= 2;
+            cellPosition.y -= 1;
             MoveToward();
         }
   
