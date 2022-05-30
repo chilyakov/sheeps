@@ -6,24 +6,23 @@ public class PlayerController : MonoBehaviour
 {
     public GridLayout gridLayout;
     private Vector3Int cellPosition;
-    private Vector3 startPosition;
     public float speed = 5f;
     private Rigidbody2D rbody;
+
     void Start()
     {
         SnapToCell();
-        //startPosition = transform.position;
     }
 
     private void Awake()
     {
         rbody = GetComponent<Rigidbody2D>();
     }
+
     void SnapToCell()
     {
         cellPosition = gridLayout.WorldToCell(transform.position);
-        transform.position = gridLayout.CellToWorld(cellPosition);
-        startPosition = transform.position;
+        rbody.position = gridLayout.CellToWorld(cellPosition);
         //Debug.Log(cellPosition);
     }
 
@@ -36,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Debug.Log(mousePos);
-            transform.position = Vector2.MoveTowards(transform.position, mousePos, speed * Time.deltaTime);
+            rbody.position = Vector2.MoveTowards(transform.position, mousePos, speed * Time.deltaTime);
             
             //rbody.MovePosition(mousePos);
             //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -56,11 +55,10 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        //Moving();
-        MouseMovement();
+
     }
 
-    void Moving()
+    void KeysMovement()
     {
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
@@ -92,26 +90,37 @@ public class PlayerController : MonoBehaviour
     void MoveToward()
     {
         //Debug.Log(cellPosition);
-        startPosition = transform.position;
-        transform.position = gridLayout.CellToWorld(cellPosition);
-        Vector3 target = gridLayout.CellToWorld(cellPosition);
-        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
-        transform.position = gridLayout.CellToWorld(cellPosition);
+        //startPosition = transform.position;
+        //transform.position = gridLayout.CellToWorld(cellPosition);
+        //Vector3 target = gridLayout.CellToWorld(cellPosition);
+        //transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        //transform.position = gridLayout.CellToWorld(cellPosition);
         //rbody.MovePosition(target);
 
-
+        rbody.position = gridLayout.CellToWorld(cellPosition);
+        Vector3 target = gridLayout.CellToWorld(cellPosition);
+        //Vector2 currentPos = rbody.position;
+        // float horizontalInput = Input.GetAxis("Horizontal");
+        // float verticalInput = Input.GetAxis("Vertical");
+        // Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
+        // inputVector = Vector2.ClampMagnitude(inputVector, 1);
+        // Vector2 movement = inputVector * speed;
+        // Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;
+        rbody.MovePosition(target);
 
     }
+
+
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.LogFormat("Coll name: {0}, coll friction: {1} ", col.name, col.friction);
-        //transform.position = startPosition;
+        Debug.LogFormat("Coll name: {0}", col.name);
+
     }
 
     void FixedUpdate() 
     {
         //MouseMovement();
-        //Moving();
+        KeysMovement();
         // Vector2 currentPos = rbody.position;
         // float horizontalInput = Input.GetAxis("Horizontal");
         // float verticalInput = Input.GetAxis("Vertical");
