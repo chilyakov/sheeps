@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,9 +7,9 @@ public class PlayerController : MonoBehaviour
 {
     public GridLayout gridLayout;
     private Vector3Int cellPosition;
-    public float speed = 5f;
+    public float speed = 0.04f;
     private Rigidbody2D rbody;
-
+    private bool stop = false;
     void Start()
     {
         SnapToCell();
@@ -22,94 +23,55 @@ public class PlayerController : MonoBehaviour
     void SnapToCell()
     {
         cellPosition = gridLayout.WorldToCell(transform.position);
-        rbody.position = gridLayout.CellToWorld(cellPosition);
-        //Debug.Log(cellPosition);
-    }
-
-
-    private void MouseMovement()
-    {
-
-        if (Input.GetMouseButtonDown(0))
-        {
-
-            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Debug.Log(mousePos);
-            rbody.position = Vector2.MoveTowards(transform.position, mousePos, speed * Time.deltaTime);
-            
-            //rbody.MovePosition(mousePos);
-            //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
-            
-            //this hit.point should give you the same Vector2 results as worldPoint variable
-            //Debug.Log(hit.point);
-            //buildPoint = hit.point;
-            
-            //now you can check if the ray hit a collider on a certain layer 
-            //if (hit.collider.gameObject.layer == buildSite)
-            //{
-            //        PlaceTower(buildPoint);
-            //}
-        }
+        transform.position = gridLayout.CellToWorld(cellPosition);
     }
 
     void Update()
     {
-
+        ReadKeys();
     }
 
-    void KeysMovement()
+    void ReadKeys()
     {
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (stop == true) return;
+
+        if (Input.GetKeyDown(KeyCode.D))
         {
             cellPosition.x += 1;
-            MoveToward();
+            stopMovement();
         }
-        
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetKeyDown(KeyCode.A))
         {
             cellPosition.x -= 1;
-            MoveToward();
+            stopMovement();
         }
-        
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        else if (Input.GetKeyDown(KeyCode.W))
         {
             cellPosition.y += 1;
-            MoveToward();
+            stopMovement();
         }
-        
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (Input.GetKeyDown(KeyCode.S))
         {
             cellPosition.y -= 1;
-            MoveToward();
+            stopMovement();
         }
-  
-    }
+        
 
-    void MoveToward()
+     }
+
+    private void stopMovement()
     {
-        //Debug.Log(cellPosition);
-        //startPosition = transform.position;
-        //transform.position = gridLayout.CellToWorld(cellPosition);
-        //Vector3 target = gridLayout.CellToWorld(cellPosition);
-        //transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
-        //transform.position = gridLayout.CellToWorld(cellPosition);
-        //rbody.MovePosition(target);
-
-        rbody.position = gridLayout.CellToWorld(cellPosition);
-        Vector3 target = gridLayout.CellToWorld(cellPosition);
-        //Vector2 currentPos = rbody.position;
-        // float horizontalInput = Input.GetAxis("Horizontal");
-        // float verticalInput = Input.GetAxis("Vertical");
-        // Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
-        // inputVector = Vector2.ClampMagnitude(inputVector, 1);
-        // Vector2 movement = inputVector * speed;
-        // Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;
-        rbody.MovePosition(target);
-
+        
+        stop = true;
+        float t = 0;
+        float s = speed;
+        while (t < s)
+        {
+            s -= Time.fixedDeltaTime;
+        }
+        stop = false;
     }
-
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -119,17 +81,11 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate() 
     {
-        //MouseMovement();
-        KeysMovement();
-        // Vector2 currentPos = rbody.position;
-        // float horizontalInput = Input.GetAxis("Horizontal");
-        // float verticalInput = Input.GetAxis("Vertical");
-        // Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
-        // inputVector = Vector2.ClampMagnitude(inputVector, 1);
-        // Vector2 movement = inputVector * speed;
-        // Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;
-        // rbody.MovePosition(newPos);
-
+        
+        Vector3 target = gridLayout.CellToWorld(cellPosition);
+        rbody.MovePosition(Vector2.MoveTowards(transform.position, target, speed));
+        //rbody.position = gridLayout.CellToWorld(cellPosition);
+        
     }
 
   }
