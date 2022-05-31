@@ -139,6 +139,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level1
       objectReference: {fileID: 0}
+    - target: {fileID: 7937359052357532287, guid: d6786bc64da613d42bd02e6d6a058e37, type: 3}
+      propertyPath: m_ChunkCullingBounds.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937359052357532287, guid: d6786bc64da613d42bd02e6d6a058e37, type: 3}
+      propertyPath: m_ChunkCullingBounds.y
+      value: 0.014999986
+      objectReference: {fileID: 0}
     - target: {fileID: 8785926054234471792, guid: d6786bc64da613d42bd02e6d6a058e37, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -203,7 +211,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 616537037402137358, guid: 57d4c06069fb8c14893df1c1c6289522, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 616537037402137358, guid: 57d4c06069fb8c14893df1c1c6289522, type: 3}
       propertyPath: m_LocalPosition.y
