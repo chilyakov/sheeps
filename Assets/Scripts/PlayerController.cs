@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     void ReadKeys()
     {
 
-        if (stop == true) return;
+        if (stop) return;
 
         if (Input.GetKeyDown(KeyCode.D))
         {
