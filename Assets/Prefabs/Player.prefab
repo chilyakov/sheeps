@@ -131,6 +131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e476516eb0d41bf4e8cf2d7c47f88ab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundTilemap: {fileID: 0}
+  collisionTilemap: {fileID: 0}
   gridLayout: {fileID: 0}
   speed: 0.04
 --- !u!50 &4470122671292430341
