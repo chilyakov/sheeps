@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1839735485 &279800663 stripped
-Tilemap:
-  m_CorrespondingSourceObject: {fileID: 1830432590338724665, guid: d6786bc64da613d42bd02e6d6a058e37, type: 3}
-  m_PrefabInstance: {fileID: 1209587619}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &712361267 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1513640338253079538, guid: 0328ab69a807623418914ef5a20995eb, type: 3}
@@ -193,11 +188,6 @@ PrefabInstance:
 --- !u!156049354 &1661849213 stripped
 Grid:
   m_CorrespondingSourceObject: {fileID: 1830432590757718686, guid: d6786bc64da613d42bd02e6d6a058e37, type: 3}
-  m_PrefabInstance: {fileID: 1209587619}
-  m_PrefabAsset: {fileID: 0}
---- !u!1839735485 &2120355250 stripped
-Tilemap:
-  m_CorrespondingSourceObject: {fileID: 5875539220088121651, guid: d6786bc64da613d42bd02e6d6a058e37, type: 3}
   m_PrefabInstance: {fileID: 1209587619}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &616537037915052942
@@ -316,14 +306,6 @@ PrefabInstance:
       propertyPath: gridLayout
       value: 
       objectReference: {fileID: 1661849213}
-    - target: {fileID: 1513640338253079539, guid: 0328ab69a807623418914ef5a20995eb, type: 3}
-      propertyPath: groundTilemap
-      value: 
-      objectReference: {fileID: 279800663}
-    - target: {fileID: 1513640338253079539, guid: 0328ab69a807623418914ef5a20995eb, type: 3}
-      propertyPath: collisionTilemap
-      value: 
-      objectReference: {fileID: 2120355250}
     - target: {fileID: 1513640338253079540, guid: 0328ab69a807623418914ef5a20995eb, type: 3}
       propertyPath: m_Name
       value: Player

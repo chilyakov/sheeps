@@ -13,16 +13,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float speed = 0.04f;
     private Vector3Int cellPosition;
+    private Vector3 startPosition;
+    private Vector3 targetPosition;
     private Rigidbody2D rbody;
     private ContactFilter2D contactFilter;
     private Collider2D[] allOverlappingColliders;
-    private bool stop = false;
     //////////////////////////////////////////////////
 
 
     void Start()
     {
-        SnapToCell();
+        SnapToCell(transform.position);
         contactFilter = new ContactFilter2D();
         allOverlappingColliders = new Collider2D[10];
 
@@ -30,7 +31,6 @@ public class PlayerController : MonoBehaviour
         controls.Main.Right.performed += _ => RightKeyPress();
         controls.Main.Up.performed += _ => UpKeyPress();
         controls.Main.Down.performed += _ => DownKeyPress();
-
     }
 
     private void LeftKeyPress()
@@ -50,7 +50,6 @@ public class PlayerController : MonoBehaviour
         cellPosition.y -= 1;
     }
 
-
     private void Awake()
     {
         controls = new Controls();
@@ -67,58 +66,11 @@ public class PlayerController : MonoBehaviour
         controls.Disable();
     }
 
-    void SnapToCell()
+    void SnapToCell(Vector3 position)
     {
-        cellPosition = gridLayout.WorldToCell(transform.position);
+        cellPosition = gridLayout.WorldToCell(position);
         transform.position = gridLayout.CellToWorld(cellPosition);
-    }
-
-    //void Update()
-    //{
-        //ReadKeys();
-    //}
-
-    void ReadKeys()
-    {
-        
-
-        if (stop) return;
-
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            cellPosition.x += 1;
-            StopMovement();
-        }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            cellPosition.x -= 1;
-            StopMovement();
-        }
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            cellPosition.y += 1;
-            StopMovement();
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            cellPosition.y -= 1;
-            StopMovement();
-        }
-        
-
-     }
-
-    private void StopMovement()
-    {
-        
-        stop = true;
-        float t = 0;
-        float s = speed;
-        while (t < s)
-        {
-            s -= Time.fixedDeltaTime;
-        }
-        stop = false;
+        startPosition = transform.position;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -139,18 +91,27 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate() 
     {
 
-        Vector3 target = gridLayout.CellToWorld(cellPosition);
-        rbody.MovePosition(Vector2.MoveTowards(transform.position, target, speed));
-
-        //rbody.position = gridLayout.CellToWorld(cellPosition);
+        targetPosition = gridLayout.CellToWorld(cellPosition);
+        rbody.MovePosition(Vector2.MoveTowards(transform.position, targetPosition, speed));
+        if (transform.position != targetPosition)
+            controls.Disable();
+        else 
+        {
+            controls.Enable();
+            startPosition = transform.position;
+        }
 
         if (rbody.OverlapCollider(contactFilter, allOverlappingColliders) > 0) {
-            //Debug.Log(allOverlappingColliders[0]);
             for (int i = 0; i < allOverlappingColliders.Length; i++)
             {
                 if (allOverlappingColliders[i] != null && allOverlappingColliders[i].name == "collider")
+                {
+
                     rbody.velocity = Vector2.zero;
-                   
+                    rbody.angularVelocity = 0;
+                    SnapToCell(startPosition);
+                    controls.Enable();
+                }
             }
         }
     }
