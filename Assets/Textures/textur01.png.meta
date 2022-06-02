@@ -304,6 +304,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: textur01_9
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 1801
+        width: 201
+        height: 130
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 114954bfb47f52543848f968a88d873e
+      internalID: -1361093916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textur01_10
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 1675
+        width: 111
+        height: 111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.71}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c29218577be5bd4f9a8ef5ed9eecb17
+      internalID: 693406169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textur01_11
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 1675
+        width: 112
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.7}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10875df4cac85b40aa07976ac078bae
+      internalID: -463710545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -316,6 +379,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       textur01_4: 1667161086
+      textur01_11: -463710545
       textur01_7: -307590799
       textur01_5: 189615664
       textur01_6: 1338095535
@@ -323,6 +387,7 @@ TextureImporter:
       textur01_8: -359550742
       textur01_9: -1361093916
       textur01_1: -939923514
+      textur01_10: 693406169
       textur01_3: -438745898
       textur01_0: 59231621
   spritePackingTag: 
