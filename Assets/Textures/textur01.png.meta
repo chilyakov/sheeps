@@ -367,6 +367,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: textur01_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1514
+        width: 144
+        height: 196
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 152032b7aeac15d419d28337116bf157
+      internalID: 811590211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textur01_13
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1457
+        width: 130
+        height: 57
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2035c1c9e9bcc984382e187cb7428532
+      internalID: 1325522992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -383,12 +425,14 @@ TextureImporter:
       textur01_7: -307590799
       textur01_5: 189615664
       textur01_6: 1338095535
+      textur01_13: 1325522992
       textur01_2: 1717210264
       textur01_8: -359550742
       textur01_9: -1361093916
       textur01_1: -939923514
       textur01_10: 693406169
       textur01_3: -438745898
+      textur01_12: 811590211
       textur01_0: 59231621
   spritePackingTag: 
   pSDRemoveMatte: 0
