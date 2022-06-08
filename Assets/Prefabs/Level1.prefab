@@ -23374,7 +23374,7 @@ GameObject:
   - component: {fileID: 1830432590757718685}
   - component: {fileID: 1830432590757718686}
   m_Layer: 0
-  m_Name: Grid
+  m_Name: Grid1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24455,7 +24455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8785926054234471792
 Transform:
   m_ObjectHideFlags: 0
