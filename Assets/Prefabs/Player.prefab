@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1513640337350598170}
   - component: {fileID: 1513640337350598169}
   m_Layer: 0
-  m_Name: cat_right
+  m_Name: fighter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 40473361b35ff6c4c8c318bb469fd1ca, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.5660378, b: 0.0702427, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
