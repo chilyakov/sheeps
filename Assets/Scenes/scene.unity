@@ -245,6 +245,10 @@ PrefabInstance:
       propertyPath: followTarget
       value: 
       objectReference: {fileID: 712361267}
+    - target: {fileID: 616537037402137585, guid: 57d4c06069fb8c14893df1c1c6289522, type: 3}
+      propertyPath: orthographic size
+      value: 4.5
+      objectReference: {fileID: 0}
     - target: {fileID: 616537037402137586, guid: 57d4c06069fb8c14893df1c1c6289522, type: 3}
       propertyPath: m_Name
       value: Camera
@@ -305,6 +309,18 @@ PrefabInstance:
     - target: {fileID: 631651783160344417, guid: 2a8c42c155c627143b5d4f0da3118e04, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 631651783365639960, guid: 2a8c42c155c627143b5d4f0da3118e04, type: 3}
+      propertyPath: m_Color.b
+      value: 0.16981131
+      objectReference: {fileID: 0}
+    - target: {fileID: 631651783365639960, guid: 2a8c42c155c627143b5d4f0da3118e04, type: 3}
+      propertyPath: m_Color.g
+      value: 0.16981131
+      objectReference: {fileID: 0}
+    - target: {fileID: 631651783365639960, guid: 2a8c42c155c627143b5d4f0da3118e04, type: 3}
+      propertyPath: m_Color.r
+      value: 0.16981131
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a8c42c155c627143b5d4f0da3118e04, type: 3}
