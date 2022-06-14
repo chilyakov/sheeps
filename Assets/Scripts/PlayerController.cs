@@ -73,18 +73,18 @@ public class PlayerController : MonoBehaviour
         startPosition = transform.position;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        foreach (Transform coll in collision.transform)
-        {
-            Debug.Log(coll.name);
-        }
+    // void OnCollisionEnter2D(Collision2D collision)
+    // {
+    //     foreach (Transform coll in collision.transform)
+    //     {
+    //         Debug.Log(coll.name);
+    //     }
 
-    }
+    // }
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.LogFormat("Coll name: {0}", col.name);
+        Debug.LogFormat("Coll tag: {0}", col.tag);
 
     }
 
