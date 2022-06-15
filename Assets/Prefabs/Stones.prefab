@@ -115,8 +115,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  target: {x: -2, y: -5, z: 0}
+  target: {x: 0.5, y: 0, z: 0}
   start: {x: -2, y: 5, z: 0}
+  rotationSpeed: 100
 --- !u!1 &1238277561555394737
 GameObject:
   m_ObjectHideFlags: 0
