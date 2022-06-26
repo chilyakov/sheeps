@@ -380,10 +380,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stones
       objectReference: {fileID: 0}
-    - target: {fileID: 1238277561555394737, guid: d3dbbb985f4e4584d88c9dab19bfb3e0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7883845552060557355, guid: d3dbbb985f4e4584d88c9dab19bfb3e0, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -619,26 +615,6 @@ PrefabInstance:
     - target: {fileID: 2569990628872250398, guid: 8eba09ee83a4d0e4c9f7108e671c0a95, type: 3}
       propertyPath: m_Name
       value: en2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2569990628872250398, guid: 8eba09ee83a4d0e4c9f7108e671c0a95, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3710904360952751679, guid: 8eba09ee83a4d0e4c9f7108e671c0a95, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3710904360952751679, guid: 8eba09ee83a4d0e4c9f7108e671c0a95, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3710904360952751679, guid: 8eba09ee83a4d0e4c9f7108e671c0a95, type: 3}
-      propertyPath: m_Color.g
-      value: 0.52504665
-      objectReference: {fileID: 0}
-    - target: {fileID: 3710904360952751679, guid: 8eba09ee83a4d0e4c9f7108e671c0a95, type: 3}
-      propertyPath: m_Color.r
-      value: 0.24056602
       objectReference: {fileID: 0}
     - target: {fileID: 6353282785505145826, guid: 8eba09ee83a4d0e4c9f7108e671c0a95, type: 3}
       propertyPath: m_RootOrder
