@@ -183,7 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   target: {x: 0.5, y: -14, z: 0}
-  start: {x: 0.5, y: 26.85, z: 0}
+  start: {x: 0.5, y: 26.846, z: 0}
 --- !u!1 &342250085018978052
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,7 +321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   target: {x: 0.5, y: -14, z: 0}
-  start: {x: 0.5, y: 26.85, z: 0}
+  start: {x: 0.5, y: 26.846, z: 0}
 --- !u!1 &5562992760163769426
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,7 +421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   target: {x: 0.5, y: -14, z: 0}
-  start: {x: 0.5, y: 26.85, z: 0}
+  start: {x: 0.5, y: 26.846, z: 0}
 --- !u!1 &7784300324026912856
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,7 +521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   target: {x: 0.5, y: -14, z: 0}
-  start: {x: 0.5, y: 26.85, z: 0}
+  start: {x: 0.5, y: 26.846, z: 0}
 --- !u!1 &8616042881911146172
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,7 +621,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   target: {x: 0.5, y: -14, z: 0}
-  start: {x: 0.5, y: 26.85, z: 0}
+  start: {x: 0.5, y: 26.846, z: 0}
 --- !u!1 &8812389139957349868
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,4 +721,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   target: {x: 0.5, y: -14, z: 0}
-  start: {x: 0.5, y: 26.85, z: 0}
+  start: {x: 0.5, y: 26.846, z: 0}
