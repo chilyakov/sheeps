@@ -21,7 +21,7 @@ public class StoneMover : MonoBehaviour
     float angleSpeed = 2;
     float radialSpeed = 0.5f;
 
-    // Update is called once per frame
+
     void Update()
     {
         angle = Time.deltaTime * angleSpeed;
@@ -40,5 +40,26 @@ public class StoneMover : MonoBehaviour
         //     transform.position = start;
         // }
     }
+
+    // float amplitudeX = -25.0f;
+    // float amplitudeY = 5.0f;
+    // float omegaX = 0.5f;
+    // float omegaY = 4.0f;
+    // float index;
+
+    // void Update () {
+    //     index += Time.deltaTime;
+    //     float x = amplitudeX*Mathf.Cos (omegaX*index);      
+    //     float y = Mathf.Abs (amplitudeY*Mathf.Sin (omegaY*index));
+    //     if(transform.position.x > 24){
+    //             transform.eulerAngles = new Vector3(270, -90, 0);
+    //     }
+    //     if(transform.position.x < -24){
+    //             transform.eulerAngles = new Vector3(270, 90, 0);
+    //     }   
+    //     transform.localPosition= new Vector3(x,y,20);
+    // }
+
+
 
 }
