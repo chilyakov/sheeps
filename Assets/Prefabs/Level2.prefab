@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: 8b80de4ab0d5af744bba4983cc8c4ee2, type: 3}
-  m_Color: {r: 0.754717, g: 0.6229975, b: 0.72410613, a: 1}
+  m_Color: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -96,12 +96,12 @@ GameObject:
   - component: {fileID: 7845271301417939878}
   - component: {fileID: 9124213624588621108}
   m_Layer: 0
-  m_Name: Light 2D
+  m_Name: lightship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7845271301417939878
 Transform:
   m_ObjectHideFlags: 0
@@ -133,8 +133,8 @@ MonoBehaviour:
   m_LightType: 2
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.7075472, g: 0.25031152, b: 0.5993875, a: 1}
-  m_Intensity: 5
+  m_Color: {r: 0.8301887, g: 0.13705944, b: 0.668857, a: 1}
+  m_Intensity: 2
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -150,24 +150,33 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_Vertices:
-  - position: {x: 0.768, y: 0.35840002, z: 0}
+  - position: {x: 0.736, y: 0.54271996, z: 0}
     color: {r: 0, g: 0, b: 0, a: 1}
-    uv: {x: 0.875, y: 0.875}
-  - position: {x: 0.864, y: -0.4096, z: 0}
+    uv: {x: 0.859375, y: 0.875}
+  - position: {x: 0.88, y: -0.11328003, z: 0}
     color: {r: 0, g: 0, b: 0, a: 1}
-    uv: {x: 0.921875, y: 0.5}
-  - position: {x: 0.864, y: 0.07040002, z: 0}
+    uv: {x: 0.9296875, y: 0.5546875}
+  - position: {x: 0.88, y: 0.20671996, z: 0}
     color: {r: 0, g: 0, b: 0, a: 1}
-    uv: {x: 0.921875, y: 0.734375}
-  - position: {x: -0.64, y: 0.35840002, z: 0}
+    uv: {x: 0.9296875, y: 0.7109375}
+  - position: {x: 0.704, y: -0.16128004, z: 0}
     color: {r: 0, g: 0, b: 0, a: 1}
-    uv: {x: 0.1875, y: 0.875}
-  - position: {x: -0.864, y: 0.21440002, z: 0}
+    uv: {x: 0.84375, y: 0.53125}
+  - position: {x: 0.384, y: -0.22528003, z: 0}
     color: {r: 0, g: 0, b: 0, a: 1}
-    uv: {x: 0.078125, y: 0.8046875}
-  - position: {x: -0.864, y: -0.4096, z: 0}
+    uv: {x: 0.6875, y: 0.5}
+  - position: {x: -0.576, y: -0.22528003, z: 0}
     color: {r: 0, g: 0, b: 0, a: 1}
-    uv: {x: 0.078125, y: 0.5}
+    uv: {x: 0.21875, y: 0.5}
+  - position: {x: -0.736, y: 0.54271996, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0.140625, y: 0.875}
+  - position: {x: -0.864, y: 0.14271997, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0.078125, y: 0.6796875}
+  - position: {x: -0.864, y: -0.17728002, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0.078125, y: 0.5234375}
   - position: {x: 0, y: 0, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
@@ -186,10 +195,28 @@ MonoBehaviour:
   - position: {x: 0, y: 0, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
     uv: {x: 0, y: 0}
-  m_Triangles: 050004000100030001000400000001000300020001000000
+  - position: {x: 0, y: 0, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  - position: {x: 0, y: 0, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  - position: {x: 0, y: 0, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  - position: {x: 0, y: 0, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  - position: {x: 0, y: 0, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  - position: {x: 0, y: 0, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  m_Triangles: 080007000500060005000700000005000600040005000000030004000000010003000000020001000000
   m_LocalBounds:
-    m_Center: {x: 0, y: -0.025599986, z: 0}
-    m_Extent: {x: 0.864, y: 0.384, z: 0}
+    m_Center: {x: 0.007999986, y: 0.15871996, z: 0}
+    m_Extent: {x: 0.872, y: 0.384, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -219,7 +246,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &631651783140373101
 Transform:
@@ -306,7 +333,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &631651783365639962
 Transform:
@@ -457,7 +484,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2317490827719043892
 Transform:
@@ -1359,6 +1386,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 631651783160344417}
     m_Modifications:
+    - target: {fileID: 613698619, guid: c80bb097804d27e499072f0087509bd1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 342250085018978052, guid: c80bb097804d27e499072f0087509bd1, type: 3}
       propertyPath: m_Name
       value: Sky
@@ -1447,7 +1478,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 656222590, guid: 0328ab69a807623418914ef5a20995eb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2024165969, guid: 0328ab69a807623418914ef5a20995eb, type: 3}
       propertyPath: m_IsActive
